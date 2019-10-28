@@ -30,23 +30,6 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-//        Object outputIndex = 0;
-//        Object[] output = new Object[objectArray.length - 1];
-//        for (Object value1 : objectArray) {
-//            if (!value1.equals(objectToRemove)) {
-//                output[outputIndex] = value1;
-//                outputIndex++;
-//            }
-//        }
-        return null;
-    }
-
-    /**
-     * @param objectArray an array of any type of Object
-     * @return the most frequently occurring object in the array
-     * given an array of objects, named `objectArray` return the most frequently occuring object in the array
-     */
-    public static Object getMostCommon(Object[] objectArray) {
         //Made an array list
         ArrayList<Object> outputArrayL = new ArrayList<Object>();
         // added the 'previous' 1st element of the input
@@ -59,10 +42,31 @@ public class ArrayUtils {
             }
 
         }
-        // Initializing new string[] to the size of outputArrayL
-        Integer[] output = new Integer[outputArrayL.size()];
-        // Converting outputArrayL to normal array of type String
+        // Initializing new Object[] to the size of outputArrayL
+        Object[] output = new Object[outputArrayL.size()];
+        // Converting outputArrayL to normal array of type Object
         return outputArrayL.toArray(output);
+    }
+
+    /**
+     * @param objectArray an array of any type of Object
+     * @return the most frequently occurring object in the array
+     * given an array of objects, named `objectArray` return the most frequently occuring object in the array
+     */
+    public static Object getMostCommon(Object[] objectArray) {
+//        //Made an array list
+//        ArrayList<Object> outputArrayL = new ArrayList<Object>();
+//        // added the 'previous' 1st element of the input
+//        outputArrayL.add(objectArray[0]);
+//        // starting at index 1; index going til end of the array; increment by 1;
+//        for (int x = 1; x < objectArray.length; x++) {
+//            // if array of index is not equal to array of index 'previous'(-1), than add it to the array list.
+//            if (objectArray[x] != objectArray[x - 1]) {
+//                outputArrayL.add(objectArray[x]);
+//            }
+//        }
+
+        return null;
     }
 
 
