@@ -36,7 +36,7 @@ public class RockPaperSissorsEvaluator {
         else if (handSign.equals(PAPER)){
             return ROCK;
         }
-        else if (handSign.equals(SCISSOR)) {
+        else if (handSign.equals(SCISSOR)){
             return PAPER;
         }
         return ROCK;

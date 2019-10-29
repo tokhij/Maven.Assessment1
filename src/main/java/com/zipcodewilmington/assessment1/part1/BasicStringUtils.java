@@ -34,12 +34,17 @@ public class BasicStringUtils {
      * @return string with identical contents, in reverse order, with first character capitalized
      */
     public static String reverseThenCamelCase(String str) {
-        String stringBuilder = new StringBuilder(str).reverse().toString();
+        // how to call on methods
+        String reversing = reverse(str);
 
-        String strOut = stringBuilder.substring(0, 1).toUpperCase() + stringBuilder.substring(1);
-        {
-            return strOut;
-        }
+//        String stringBuilder = new StringBuilder(str).reverse().toString();
+        String camel = camelCase(reversing);
+
+//        String strOut = stringBuilder.substring(0, 1).toUpperCase() + stringBuilder.substring(1);
+//        {
+//            return strOut;
+//        }
+        return camel;
     }
 
     /**
