@@ -54,19 +54,27 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     public static Object getMostCommon(Object[] objectArray) {
-//        //Made an array list
-//        ArrayList<Object> outputArrayL = new ArrayList<Object>();
-//        // added the 'previous' 1st element of the input
-//        outputArrayL.add(objectArray[0]);
-//        // starting at index 1; index going til end of the array; increment by 1;
-//        for (int x = 1; x < objectArray.length; x++) {
-//            // if array of index is not equal to array of index 'previous'(-1), than add it to the array list.
-//            if (objectArray[x] != objectArray[x - 1]) {
-//                outputArrayL.add(objectArray[x]);
-//            }
-//        }
+        // declare variables needed
+         int counter =  0;
+         int counterTemp = 0;
+         Object highest = 0;
 
-        return null;
+         // inner loop checks for highest number before outer loop goes thru
+         for (int i = 0 ; i < objectArray.length -1 ; i ++ ) {
+             for (int j = 0; j < objectArray.length -1; j++) {
+                 if (objectArray[i] == objectArray[j]){
+                     counterTemp++;
+                 }
+                 // after inner loop checks for MC num,
+                 if(counterTemp > counter){
+                     counter = counterTemp;
+                     counterTemp = 0;
+                     highest = objectArray[i];
+                 }
+
+             }
+         }
+        return highest;
     }
 
 

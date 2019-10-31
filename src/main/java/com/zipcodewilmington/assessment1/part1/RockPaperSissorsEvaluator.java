@@ -8,7 +8,7 @@ public class RockPaperSissorsEvaluator {
     protected static final String PAPER = "paper";
     protected static final String SCISSOR = "scissor";
 
-    /** 
+    /**
      * @param handSign a string representative of a hand sign
      * @return the respective winning move
      */
